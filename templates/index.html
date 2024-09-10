@@ -8,7 +8,19 @@
     <link href = "{{ url_for('static', filename='css/app.css') }}" rel="stylesheet">
   </head>
   <body>
-    <h1>Gestão de Usuarios</h1>
+    <div class="container">
+      <h1 text="center">Gestão de Usuarios</h1>
+
+      <! Forms para add os clientes -->
+      <div c-container="{{url_for('client.form_clients')}}"></div>
+      <hr>
+
+      <! Listando os clientes -->
+      <h2>Lista De Clientes</h2>
+      <div c-container="{{url_for('client.list_clients')}}">
+        <button class="btn btn-primary">Criar Usuario</button>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/cru.js') }}" ></script>

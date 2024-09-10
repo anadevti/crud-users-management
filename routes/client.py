@@ -26,7 +26,7 @@ def insert_clients():
 
 @client_route.route('/new', methods=['GET'])
 def form_clients():
-    return render_template('form_client.html')
+    return render_template('form_clients.html')
 
 @client_route.route('/<int:client_id>', methods=['GET'])
 def details_clients(client_id):
